@@ -1,0 +1,46 @@
+0) ADD_PERSISTENT_SUBPROGRAM (FLUSHONLY):
+<FixLoc>
+	Function:	main
+	Source Location: <LocationInfo: main @ pmem_memcpy.c:161>
+	Instructions:
+		  %66 = load i8*, i8** %7, align 8, !dbg !891
+		  %67 = load i64, i64* %12, align 8, !dbg !892
+		  %68 = mul i64 2, %67, !dbg !893
+		  call void @llvm.memset.p0i8.i64(i8* align 1 %66, i8 0, i64 %68, i1 false), !dbg !894
+</FixLoc>
+
+1) ADD_PERSISTENT_SUBPROGRAM (FLUSHONLY):
+<FixLoc>
+	Function:	do_memcpy
+	Source Location: <LocationInfo: do_memcpy @ pmem_memcpy.c:89>
+	Instructions:
+		  %23 = load i8*, i8** %11, align 8, !dbg !857
+		  %24 = load i64, i64* %13, align 8, !dbg !858
+		  call void @llvm.memset.p0i8.i64(i8* align 1 %23, i8 0, i64 %24, i1 false), !dbg !859
+</FixLoc>
+
+2) ADD_PERSISTENT_SUBPROGRAM (FLUSHONLY):
+<FixLoc>
+	Function:	do_memcpy
+	Source Location: <LocationInfo: do_memcpy @ pmem_memcpy.c:91>
+	Instructions:
+		  %25 = load i8*, i8** %11, align 8, !dbg !860
+		  %26 = load i64, i64* %13, align 8, !dbg !861
+		  %27 = udiv i64 %26, 4, !dbg !862
+		  call void @llvm.memset.p0i8.i64(i8* align 1 %25, i8 90, i64 %27, i1 false), !dbg !863
+</FixLoc>
+
+3) ADD_PERSISTENT_SUBPROGRAM (FLUSHONLY):
+<FixLoc>
+	Function:	do_memcpy
+	Source Location: <LocationInfo: do_memcpy @ pmem_memcpy.c:92>
+	Instructions:
+		  %28 = load i8*, i8** %11, align 8, !dbg !864
+		  %29 = load i64, i64* %13, align 8, !dbg !865
+		  %30 = udiv i64 %29, 4, !dbg !866
+		  %31 = getelementptr inbounds i8, i8* %28, i64 %30, !dbg !867
+		  %32 = load i64, i64* %13, align 8, !dbg !868
+		  %33 = udiv i64 %32, 4, !dbg !869
+		  call void @llvm.memset.p0i8.i64(i8* align 1 %31, i8 70, i64 %33, i1 false), !dbg !870
+</FixLoc>
+

@@ -41,5 +41,4 @@ build/
 *.code-workspace
 
 # Force add results
-results/
 build_old

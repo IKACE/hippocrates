@@ -1,0 +1,10 @@
+INFO:root:
+Fixer stats for "/usr/lib/llvm-8/bin/opt -load /home/yilegu/eecs582pj7/hippocrates/build/src/PMFIXER.so -pm-bug-fixer -trace-file /home/yilegu/eecs582pj7/hippocrates/build/tests/validation/pmem_memcpy_TEST0_8bbb0af9c/pmemcheck0.trace -fix-summary-file=pmem_memcpy_TEST0_8bbb0af9c_summary.txt -heuristic-raising /tmp/tmp9qtkpyb6/pmem_memcpy.static-debug_linked.bc":
+INFO:root:Fixer time: 00:00:38 (38.535853 seconds)
+INFO:root:Fixer mem: 346.2734375 MB
+INFO:root:Fixer return code: 0
+INFO:root:
+Fixer stats for "/usr/lib/llvm-8/bin/opt -load /home/yilegu/eecs582pj7/hippocrates/build/src/PMFIXER.so -pm-bug-fixer -trace-file /home/yilegu/eecs582pj7/hippocrates/build/tests/validation/pmem_memcpy_TEST0_8bbb0af9c/pmemcheck0.trace -fix-summary-file=pmem_memcpy_TEST0_8bbb0af9c_summary.txt -heuristic-raising /tmp/tmpnnuz0us7/pmem_memcpy.static-debug_linked.bc":
+INFO:root:Fixer time: 00:00:27 (27.092601 seconds)
+INFO:root:Fixer mem: 346.48046875 MB
+INFO:root:Fixer return code: 0

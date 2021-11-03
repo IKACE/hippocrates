@@ -16,10 +16,10 @@ import yaml
 
 def get_linker_strings():
     # iangneal: inserted by CMAKE
-    pmtest_library = Path(r'${PMTEST_LIBS}')
+    pmtest_library = Path(r'/home/yilegu/eecs582pj7/hippocrates/build/deps/pmtest/libs')
     
     if not pmtest_library.exists():
-        raise Exception(r'Path ${PMTEST_LIBS} does not exist!')
+        raise Exception(r'Path /home/yilegu/eecs582pj7/hippocrates/build/deps/pmtest/libs does not exist!')
 
     pmdk_required = ['daxctl', 'ndctl', 'rt', 'dl', 'unwind', 'lzma', 'event']
     pmdk_str = ' '.join(['-l'+lib for lib in pmdk_required])
@@ -28,10 +28,10 @@ def get_linker_strings():
 
 def run_pass_and_compile(args):
     # iangneal: inserted by CMAKE
-    pass_library = Path(r'${LLVM_PASS_PATH}')
+    pass_library = Path(r'/home/yilegu/eecs582pj7/hippocrates/build/src/PMFIXER.so')
 
     if not pass_library.exists():
-        raise Exception(r'Path ${LLVM_PASS_PATH} does not exist!')
+        raise Exception(r'Path /home/yilegu/eecs582pj7/hippocrates/build/src/PMFIXER.so does not exist!')
 
     if 'LLVM_COMPILER_PATH' not in os.environ:
         raise Exception('Please export "LLVM_COMPILER_PATH", as you would for wllvm')
@@ -44,8 +44,8 @@ def run_pass_and_compile(args):
     # 0. link with the persistent memory intrinsics, the fixer needs them.
     link_exe = llvm_path / 'llvm-link'
     assert link_exe.exists()
-    pm_intrinsics = Path(r'${PMINTRINSICS_BITCODE}')
-    assert pm_intrinsics.exists(), f'${pm_intrinsics.name} does not exist! Bad build!'
+    pm_intrinsics = Path(r'/home/yilegu/eecs582pj7/hippocrates/build/src/intrinsic/libPMINTRINSICS.so.bc')
+    assert pm_intrinsics.exists(), f' does not exist! Bad build!'
     link_arg_str_fn = lambda out: (f'{str(link_exe)} {str(args.bitcode_file)} '
                                    f'{str(pm_intrinsics)} -o {str(out)}')
 
